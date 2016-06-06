@@ -57,8 +57,6 @@ def cycleresults(url, t, e1):
     return rdata, t, e1
 
 def linkscrwaling(pages, y, e1, e2, e3, e4, e5, t):
-    if pages <= 180:
-        pages = pages
     post_list = []
     links = []
     url = 'https://www.ptt.cc/bbs/NTUcourse/index%d.html'%(int(pages))
@@ -120,7 +118,7 @@ def linkscrwaling(pages, y, e1, e2, e3, e4, e5, t):
                         pass
                 _post = {}
                 try:
-                    print 'a'
+                    # print 'a'
                     #開始加入資料
                     _post['ip'] = meta2[0].text.split(' ')[-1:][0].rstrip('\n')#ip位置
                     _post['site'] = link#這個meta2[1].text.split(' ')[-1:][0].rstrip('\n')會有點錯誤#文章網址
@@ -131,7 +129,7 @@ def linkscrwaling(pages, y, e1, e2, e3, e4, e5, t):
                         if meta1 == None:
                             _post[title_dic[i]] = 'I do not know TAT'
                 except:
-                    print 'b'
+                    # print 'b'
                     for link2 in posts:
                         if pre + link2.find(class_='title').a['href'] == link:
                             _post['author'] = link2.find(class_='author').text
