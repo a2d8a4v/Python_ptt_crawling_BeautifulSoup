@@ -1,2 +1,5 @@
 # Python_ptt_crawling_BeautifulSoup
-使用requests 和
+使用requests和BeautifulSoup對ptt進行爬蟲，範例為ntucourse
+
+@目前問題：
+1.跑到index170html時開始會有連線不上的問題，從requests.get(url)開始出問題，目前正在思考url的問題或是requests本身的bug的問題
